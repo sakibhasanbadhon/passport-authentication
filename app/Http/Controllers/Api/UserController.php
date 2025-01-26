@@ -33,7 +33,7 @@ class UserController extends Controller
     }
 
     public function userLogout(Request $request)
-    {
+    { 
         if (Auth::guard('api')->check()) {
             $user = Auth::guard('api')->user();
             $user->token()->revoke();
